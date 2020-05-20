@@ -5,6 +5,8 @@ let client = new LyricsClient(url);
 document.querySelector(".button").addEventListener("click", function () {
     let keyword = document.querySelector(".artist-input").value;
     let second = document.querySelector(".title-input").value;
+    document.querySelector(".lyrics-input").style.display = "none";
+    document.querySelector(".lyrics-button").style.display = "none";
     client.search(keyword, second);
 });
 
