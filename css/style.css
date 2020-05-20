@@ -1,0 +1,99 @@
+body {
+    background-color: white;
+    color: black;
+}
+p {
+    margin-left: 50px;
+}
+.a {
+    color: black;
+    margin-left: 20px;
+}
+.t {
+    color: black;
+    margin-left: 20px;
+}
+.l {
+    color: black;
+    margin-left: 20px;
+}
+.nav-bar {
+    background-color: #ADFF2F;
+}
+.lyrics-input {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    width: 400px;
+    height: 35px;
+    border-radius: 10px;
+    border-color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.button {
+    color: black;
+    border-color: black;
+    border-radius: 3px;
+    margin-left: 390px;
+}
+.dark-mode-button {
+    margin-left: 325px;
+    border-color: black;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    margin-top: 13px;
+    margin-bottom: 13px;
+
+}
+.dark-mode-button-2 {
+    margin-left: 5px;
+    border-color: white;
+    border-radius: 3px;
+    background-color: white;
+    color: dimgray;
+}
+.artist-input {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 35px;
+    color: black;
+    border-color: black;
+    border-radius: 3px;
+    font-family: system-ui;
+    padding: 0px 0.125rem 0px 0.5rem;
+}
+.title-input {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 35px;
+    color: black;
+    border-color: black;
+    border-radius: 3px;
+    font-family: system-ui;
+    padding: 0px 0.125rem 0px 0.5rem;
+}
+.logo {
+    width: 145px;
+    margin-left: 405px;
+    margin-bottom: -50px;
+    margin-top: -50px;
+}
+::placeholder {
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+.sing-in {
+    color: black;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 12.5px;
+}
+.sing-up {
+    color: black;
+    font-size: 12.5px;
+}
