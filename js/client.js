@@ -64,9 +64,12 @@ class LyricsClient{
                             }).catch(err => console.log(err.message));
     }
     search_lyrics(lKeyword) {
-        for (let i = 0; i < lyrics[99]; i++) {
-            localStorage.getItem('lyrics');
+        if (lKeyword === lyrics[379]) {
+            for (let i =375; i < 390; i++) {
+                localStorage.getItem('lyrics');
             
+            }
         }
+            
     }
 }
