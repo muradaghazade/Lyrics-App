@@ -36,6 +36,36 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
 })
 
 document.querySelector(".lyrics-button").addEventListener('click', function(){
-    let lkeyword = document.querySelector(".lyrics-input").value;
-    client.search_lyrics(lkeyword);
+    let keyword = document.querySelector(".lyrics-input").value;
+    let found = search_keyword(keyword);
+
+    if(found.length > 0) {
+      
+    } else {
+      alert("Not found");
+    }
+
 });
+
+
+search_keyword = (keyword) => {
+
+  let results = [];
+  for(let i=0; i<localStorage.length; i++) {
+     let keyname = localStorage.key(i)  // lyrics_Reminder
+     if(keyname.startsWith("lyrics_")) {
+        let record = localStorage.getItem(keyname); 
+        let entry = JSON.parse(record); //Object: {title: Reminder, artist: The Weeknd, lyrics: "Song lyrics goes here"}
+        if(entry.lyrics.toLowerCase().indexOf(keyword) > -1) { // "song lyrics goes here".indexOf("lyrics")
+          results.push(entry);
+        } 
+     }
+  }
+  return results;
+}
+
+
+
+
+
+
