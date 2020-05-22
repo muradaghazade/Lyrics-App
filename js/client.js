@@ -42,27 +42,23 @@ class LyricsClient{
                 </style>`;
     }
 
-    search(keyword, second) {
-        let url = `${this.url}/${keyword}/${second}`;
+    search(artist, title) {
+        let url = `${this.url}/${artist}/${title}`;
         
         fetch(url)
             .then(resp => resp.json())
             .then(data => {
                 this.render_data_to_dom(data);
-                let records = localStorage.getItem("lyrics");
 
-                    if(records == undefined) {
-                        records = [];
-                    } else {
-                        records = records.split(",");
-                    }
-
-                let record = {author: keyword, title: second, lyrics: data}
-                    records.push(record)
-
-                localStorage.setItem("lyrics", JSON.stringify(records));
-                            }).catch(err => console.log(err.message));
+                let entry = {
+                    artist: artist,
+                    title: title,
+                    lyrics: data.lyrics
+                }
+                this.save_to_storage(title, entry);
+            }).catch(err => console.log(err.message));
     }
+
     search_lyrics(lKeyword) {
         if (lKeyword === "idk") {
             //for (let i =375; i < 390; i++) {
@@ -72,4 +68,11 @@ class LyricsClient{
         }
             
     }
+
+
+    save_to_storage(key, data) {
+        let k = `lyrics_${key}`;
+        window.localStorage.setItem(k, JSON.stringify(data));
+    }
+
 }
