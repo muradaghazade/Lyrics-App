@@ -60,11 +60,11 @@ class LyricsClient{
     }
 
     search_lyrics(lKeyword) {
-        if (lKeyword === lyrics[379]) {
-            for (let i =375; i < 390; i++) {
-                localStorage.getItem('lyrics');
+        if (lKeyword === "idk") {
+            //for (let i =375; i < 390; i++) {
+                console.log(localStorage.getItem('lyrics'));
             
-            }
+            //}
         }
             
     }
