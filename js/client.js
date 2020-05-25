@@ -49,18 +49,8 @@ class LyricsClient{
             .then(resp => resp.json())
             .then(data => {
                 this.render_data_to_dom(data);
-                let records = localStorage.getItem("lyrics");
+                
 
-                    if(records == undefined) {
-                        records = [];
-                    } else {
-                        records = records.split(",");
-                    }
-
-                let record = {author: keyword, title: second, lyrics: data}
-                    records.push(record)
-
-                localStorage.setItem("lyrics", JSON.stringify(records));
                             }).catch(err => console.log(err.message));
     }
     search_lyrics(lKeyword) {
