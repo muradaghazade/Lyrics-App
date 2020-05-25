@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyrics App</title>
-    <link rel="icon" href="mini-logo.png">
+    <link rel="icon" href="better-mini-logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min copy 2.css">
 </head>
@@ -22,30 +22,33 @@
         <button class="dark-mode-button">Dark Mode</button>
         <button class="dark-mode-button-2">Light Mode</button>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-               <input class="lyrics-input" type="text" placeholder="Seach any Weeknd song">
-                <button class="lyrics-button">Search</button>
-            </div>
-            <div class="col-md-6">
-                <div class="main">
-                    <div class="song-info">
-            
-                    </div>
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="first-part" class="col-md-2">
+                    <div class="keyword-part">
+                        <h3>Here you can search any part of lyrics of The Weeknd's songs.</h3>
+                        <input class="lyrics-input" type="text" placeholder="Search any part of lyrics">
+                         <button class="lyrics-button">Search</button>
+                     </div>
+                </div>
+                <div id="second-part" class="col-md-8">
+                    <h1>XO LYRICS</h1>
+                    <p>Is the page where you can search any part of song and get that song!</p>
+                    <p>And also you can get Lyrics of any song you want!</p>
+                </div>
+                <div id="third-part" class="col-md-2">
                     <div class="elements">
+                        <h2>Here you can search any song.</h2>
                         <input class="artist-input" type="text" placeholder="Artist Name">
                         <div>
                             <input class="title-input" type="text" placeholder="Song Title">
                         </div>
                         <button class="button">Search</button>
-                        <!--<h2 class="a">Artist: <small class="artist"></small></h2>
-                        <h2 class="t">Title:  <small class="title"></small></h2>
-                        <h2 class="l">Lyrics: <p class="lyrics"></p></h2>-->
                        </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <script src="js/client.js"></script>
     <script src="js/app.js"></script>
