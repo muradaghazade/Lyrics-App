@@ -4,6 +4,16 @@ body {
 }
 p {
     margin-left: 50px;
+    font-size: 16px;
+}
+h1 {
+    color: #00FF00 !important;
+}
+h2{
+    color: #00FF00 !important;
+}
+h3 {
+    color: #00FF00 !important;
 }
 .a {
     color: black;
@@ -21,25 +31,24 @@ p {
     background-color: #ADFF2F;
 }
 .lyrics-input {
-    margin-left: 50px;
-    width: 400px;
+    color: black;
+    width: 160px;
     height: 35px;
-    border-radius: 5px;
+    border-radius: 3px;
     border-color: black;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .lyrics-button {
     color: black;
     border-color: black;
     border-radius: 3px;
+    margin-top: 5px;
 
 }
 .button {
     color: black;
     border-color: black;
     border-radius: 3px;
-    margin-left: 390px;
 }
 .dark-mode-button {
     margin-left: 325px;
@@ -59,10 +68,10 @@ p {
     color: dimgray;
 }
 .artist-input {
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 15px;
+    margin-left: ;
     margin-bottom: 20px;
-    width: 400px;
+    width: ;
     height: 35px;
     color: black;
     border-color: black;
@@ -71,9 +80,7 @@ p {
     padding: 0px 0.125rem 0px 0.5rem;
 }
 .title-input {
-    margin-left: 50px;
     margin-bottom: 20px;
-    width: 400px;
     height: 35px;
     color: black;
     border-color: black;
@@ -103,4 +110,17 @@ span:hover {
 .sing-up {
     color: black;
     font-size: 12.5px;
+}
+.keyword-part {
+    margin-left: 10px;
+    margin-bottom: 1328px;
+}
+.elements {
+    margin-bottom: 1300px;
+}
+#first-part {
+    background-color: #888888;
+}
+#third-part {
+    background-color: #808080;
 }
