@@ -34,28 +34,30 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
                                     document.querySelector(".dark-mode-button").style.backgroundColor = "dimgray";
 })
 
-document.querySelector(".lyrics-button").addEventListener('click', function(){
-    let keyword = document.querySelector(".lyrics-input").value;
-    let found = search_keyword(keyword);
 
-    if(found.length > 0) {
-      document.querySelector("#second-part").innerHTML = `
-      <div class="about-track">
-      <h1>${found[0].artist.toUpperCase()}</h1>
-      <h1>${found[0].title.toUpperCase()}</h1>
-      <p>${found[0].lyrics.split("\n").join("<br/>")}</p>
-      </div>
-        <style>
-             h1 {
-                color: #00FF00;
-                }
-        </style>
-      `
-    } else {
-      alert("Not found");
+    document.querySelector(".lyrics-button").addEventListener('click', function(){
+        let keyword = document.querySelector(".lyrics-input").value;
+        let found = search_keyword(keyword);
+    for(var i=0; i<found.length; i++){
+        if(found.length > 0) {
+          document.querySelector("#second-part").innerHTML = `
+          <div class="about-track">
+          <h1>${found[i].artist.toUpperCase()}</h1>
+          <h1>${found[i].title.toUpperCase()}</h1>
+          <p>${found[i].lyrics.split("\n").join("<br/>")}</p>
+          </div>
+            <style>
+                 h1 {
+                    color: #00FF00;
+                    }
+            </style>
+          `
+        } else {
+          alert("Not found");
+        }
     }
+    });
 
-});
 
 
 search_keyword = (keyword) => {
