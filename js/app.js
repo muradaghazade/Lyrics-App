@@ -48,9 +48,9 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
                 song_title.innerHTML = `${found[i].title.toUpperCase()}`
                 let lyrics_button = document.createElement("h3", {'class': "clickable-button"});
                 lyrics_button.innerHTML = "▼";
-                lyrics_button.setAttribute("style", "color:dimgray;")
+                lyrics_button.setAttribute("style", "color:dimgray; margin-left:80px;")
                 let hide_button = document.createElement("h3", {'class': "hide-button"});
-                hide_button.setAttribute("style", "color:dimgray;")
+                hide_button.setAttribute("style", "color:dimgray; margin-left:80px;")
                 hide_button.innerHTML = ""
                 track_container.appendChild(header);
                 track_container.appendChild(song_title);
