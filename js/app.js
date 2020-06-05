@@ -45,38 +45,25 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
                 header.innerHTML = `${found[i].artist.toUpperCase()}`;
                 let song_title = document.createElement("h1", {'class': "song-title"});
                 song_title.innerHTML = `${found[i].title.toUpperCase()}`
+                let lyrics_button = document.createElement("button", {'class': "clickable-button"});
+                lyrics_button.innerHTML = "Show lyrics"
+                lyrics_button.setAttribute("style", "color:black; background-color:#ADFF2F; border-color:#ADFF2F; border-radius:5px; outline:none;")
                 document.querySelector(".promo-container").appendChild(header);
                 document.querySelector(".promo-container").appendChild(song_title);
-                document.querySelector(".promo-container").addEventListener('click', function(e){
+                document.querySelector(".promo-container").appendChild(lyrics_button);
+                lyrics_button.addEventListener('click', function(e){
+                    e.target.innerHTML = "";
                     let song_lyrics = document.createElement("p", {'class': "ep"});
                     song_lyrics.innerHTML = `${found[i].lyrics.split("\n").join("<br/>")}`;
+                    song_lyrics.setAttribute("style", "color:black")
                     e.target.appendChild(song_lyrics);
                 })
-                // document.querySelector("#second-part").innerHTML += `
-                //     <div class="about-track">
-                //     <h1 class="clickable-h1">${found[i].artist.toUpperCase()}</h1>
-                //     <h1>${found[i].title.toUpperCase()}</h1>
-                //     <p class="ep"></p>
-                //     </div>
-                //       <style>
-                //           h1 {
-                //               color: #00FF00;
-                //               }
-                //       </style>
-                //     `
               } else {
                 alert("Not found");
               }
         }
         
     });
-    // document.addEventListener('click', function(e){
-    //     if(e.target.className == 'clickable-h1'){
-    //         document.querySelector(".ep").innerHTML = `
-    //         <p>${found[i].lyrics.split("\n").join("<br/>")}</p>
-    //         `
-    //     }
-    // })
 
 search_keyword = (keyword) => {
 
