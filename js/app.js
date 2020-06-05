@@ -41,23 +41,39 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
         document.querySelector(".promo-text").style.display = "none";
         for (let i = 0; i < found.length; i++) {
             if(found.length > 0) {
+                let track_container = document.createElement("div", {'class': "tracks-cotnainer"});
                 let header = document.createElement("h1", {'class': "clickable-h1"});
                 header.innerHTML = `${found[i].artist.toUpperCase()}`;
                 let song_title = document.createElement("h1", {'class': "song-title"});
                 song_title.innerHTML = `${found[i].title.toUpperCase()}`
-                let lyrics_button = document.createElement("button", {'class': "clickable-button"});
+                let lyrics_button = document.createElement("small", {'class': "clickable-button"});
                 lyrics_button.innerHTML = "Show lyrics"
-                lyrics_button.setAttribute("style", "color:black; background-color:#ADFF2F; border-color:#ADFF2F; border-radius:5px; outline:none;")
-                document.querySelector(".promo-container").appendChild(header);
-                document.querySelector(".promo-container").appendChild(song_title);
-                document.querySelector(".promo-container").appendChild(lyrics_button);
+                lyrics_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
+                let hide_button = document.createElement("small", {'class': "hide-button"});
+                hide_button.innerHTML = ""
+                hide_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
+                track_container.appendChild(header);
+                track_container.appendChild(song_title);
+                track_container.appendChild(lyrics_button);
+                track_container.appendChild(hide_button);
                 lyrics_button.addEventListener('click', function(e){
                     e.target.innerHTML = "";
                     let song_lyrics = document.createElement("p", {'class': "ep"});
                     song_lyrics.innerHTML = `${found[i].lyrics.split("\n").join("<br/>")}`;
-                    song_lyrics.setAttribute("style", "color:black")
-                    e.target.appendChild(song_lyrics);
+                    hide_button.innerHTML = "Show less";
+                    track_container.appendChild(song_lyrics);
+                    hide_button.addEventListener('click', function(e){
+                        song_lyrics.innerHTML = "";
+                        lyrics_button.innerHTML = "Show lyrics";
+                        e.target.innerHTML = "";
+                    })
                 })
+                // hide_button.addEventListener('click', function(e){
+                //     song_lyrics.innerHTML = `hi`;
+                //     lyrics_button.innerHTML = "show_lyrics";
+                //     e.target.innerHTML = "";
+                // })
+                document.querySelector(".promo-container").appendChild(track_container)
               } else {
                 alert("Not found");
               }
