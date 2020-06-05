@@ -3,6 +3,7 @@ body {
     color: black;
 }
 p {
+    color: dimgray;
     margin-left: 50px;
     font-size: 16px;
 }
@@ -12,8 +13,12 @@ h1 {
 h2{
     color: #00FF00 !important;
 }
-h3 {
+h4{
     color: #00FF00 !important;
+    font-size: 25px !important;
+}
+button {
+    color: black;
 }
 .a {
     color: black;
@@ -69,9 +74,7 @@ h3 {
 }
 .artist-input {
     margin-top: 15px;
-    margin-left: ;
     margin-bottom: 20px;
-    width: ;
     height: 35px;
     color: black;
     border-color: black;
@@ -119,8 +122,11 @@ span:hover {
     margin-bottom: 1300px;
 }
 #first-part {
-    background-color: #888888;
+    background-color: #808080;
 }
 #third-part {
     background-color: #808080;
+}
+.clickable-button {
+    color: black;
 }
