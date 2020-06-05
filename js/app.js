@@ -47,11 +47,9 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
                 let song_title = document.createElement("h1", {'class': "song-title"});
                 song_title.innerHTML = `${found[i].title.toUpperCase()}`
                 let lyrics_button = document.createElement("span", {'class': "clickable-button"});
-                lyrics_button.innerHTML = "Show lyrics"
-                // lyrics_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
+                lyrics_button.innerHTML = "Show lyrics";
                 let hide_button = document.createElement("span", {'class': "hide-button"});
                 hide_button.innerHTML = ""
-                // hide_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
                 track_container.appendChild(header);
                 track_container.appendChild(song_title);
                 track_container.appendChild(lyrics_button);
@@ -68,11 +66,6 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
                         e.target.innerHTML = "";
                     })
                 })
-                // hide_button.addEventListener('click', function(e){
-                //     song_lyrics.innerHTML = `hi`;
-                //     lyrics_button.innerHTML = "show_lyrics";
-                //     e.target.innerHTML = "";
-                // })
                 document.querySelector(".promo-container").appendChild(track_container)
               } else {
                 alert("Not found");
