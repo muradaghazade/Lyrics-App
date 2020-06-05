@@ -46,12 +46,12 @@ document.querySelector(".dark-mode-button-2").addEventListener('click', function
                 header.innerHTML = `${found[i].artist.toUpperCase()}`;
                 let song_title = document.createElement("h1", {'class': "song-title"});
                 song_title.innerHTML = `${found[i].title.toUpperCase()}`
-                let lyrics_button = document.createElement("small", {'class': "clickable-button"});
+                let lyrics_button = document.createElement("span", {'class': "clickable-button"});
                 lyrics_button.innerHTML = "Show lyrics"
-                lyrics_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
-                let hide_button = document.createElement("small", {'class': "hide-button"});
+                // lyrics_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
+                let hide_button = document.createElement("span", {'class': "hide-button"});
                 hide_button.innerHTML = ""
-                hide_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
+                // hide_button.setAttribute("style", "color:black; background-color:white; border-color:white; border-radius:5px; outline:none;")
                 track_container.appendChild(header);
                 track_container.appendChild(song_title);
                 track_container.appendChild(lyrics_button);
